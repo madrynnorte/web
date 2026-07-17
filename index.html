@@ -164,17 +164,22 @@
 
     /* ── TORNEOS ── */
     #torneos { background:var(--verde-oscuro); color:var(--blanco); }
-    .torneos-inner { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
     #torneos .section-label { color:#7fcc99; }
     #torneos .section-title { color:var(--blanco); }
     #torneos .section-body { color:#b0ccb8; }
-    .torneos-features { margin-top:1.8rem; display:flex; flex-direction:column; gap:.9rem; }
-    .torneo-feature { display:flex; align-items:flex-start; gap:.9rem; }
-    .torneo-feature-dot { width:7px; height:7px; min-width:7px; background:var(--rojo); border-radius:50%; margin-top:7px; }
-    .torneo-feature p { font-size:.88rem; color:#c0d8c8; line-height:1.5; }
-    .torneos-cta-box { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.15); padding:2.5rem; border-radius:4px; }
-    .torneos-cta-box h3 { font-family:'Oswald',sans-serif; font-size:1.5rem; font-weight:700; text-transform:uppercase; color:var(--blanco); margin-bottom:.9rem; }
-    .torneos-cta-box p { font-size:.88rem; color:#a0c4af; line-height:1.6; margin-bottom:1.5rem; }
+    .ligas-wrap { max-width:820px; margin:2.5rem auto 0; }
+    .ligas-grupo + .ligas-grupo { margin-top:2.3rem; }
+    .ligas-grupo-header { display:flex; align-items:center; gap:.6rem; margin-bottom:1rem; }
+    .ligas-grupo-titulo { font-family:'Oswald',sans-serif; font-size:.95rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--blanco); }
+    .ligas-grupo-badge { font-family:'Oswald',sans-serif; font-size:.65rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.2rem .55rem; border-radius:3px; }
+    .ligas-grupo-badge.activa { background:var(--rojo); color:var(--blanco); }
+    .ligas-grupo-badge.proxima { background:rgba(255,255,255,.15); color:#e0e0e0; }
+    .ligas-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+    .liga-banner-card { border-radius:6px; overflow:hidden; background:rgba(255,255,255,.06); }
+    .liga-banner-img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+    .liga-banner-actions { display:flex; gap:.5rem; padding:.7rem; flex-wrap:wrap; }
+    .liga-banner-actions a { flex:1; text-align:center; }
+    .btn-blanco.btn-sm { font-size:.78rem; padding:.65rem .7rem; }
     .btn-blanco { font-family:'Oswald',sans-serif; font-size:.88rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; background:var(--blanco); color:var(--verde-oscuro); padding:.8rem 1.6rem; text-decoration:none; border-radius:3px; display:inline-block; transition:opacity .2s; }
     .btn-blanco:hover { opacity:.9; }
 
@@ -265,7 +270,7 @@
       .nav-links { display:none; flex-direction:column; position:absolute; top:64px; left:0; right:0; background:rgba(13,13,13,.97); padding:1rem 2rem 1.5rem; gap:1rem; border-top:1px solid #222; }
       .nav-links.open { display:flex; }
       .nav-toggle { display:flex; }
-      .sobre-grid, .torneos-inner, .festejos-inner, .contacto-inner, .ubicacion-inner, .trofeo-inner { grid-template-columns:1fr; gap:2.5rem; }
+      .sobre-grid, .festejos-inner, .contacto-inner, .ubicacion-inner, .trofeo-inner { grid-template-columns:1fr; gap:2.5rem; }
       .sobre-escudo { order:-1; }
       .sobre-escudo img { width:160px; }
       .pilares { grid-template-columns:1fr; }
@@ -463,24 +468,80 @@
   <!-- TORNEOS -->
   <section id="torneos">
     <div class="container">
-      <div class="torneos-inner">
-        <div>
-          <p class="section-label">Competencia</p>
-          <h2 class="section-title">Torneos organizados</h2>
-          <p class="section-body">Organizamos torneos regulares con alcance local y regional. Fixture, posiciones y resultados en tiempo real.</p>
-          <div class="torneos-features">
-            <div class="torneo-feature"><div class="torneo-feature-dot"></div><p>Fútbol 7 masculino y femenino con inscripción abierta</p></div>
-            <div class="torneo-feature"><div class="torneo-feature-dot"></div><p>Fixture, resultados y posiciones publicados semanalmente</p></div>
-            <div class="torneo-feature"><div class="torneo-feature-dot"></div><p>Premios: indumentaria de <strong>Dribling Club PM</strong> y trofeos con propósito de <strong>Necológica</strong></p></div>
-            <div class="torneo-feature"><div class="torneo-feature-dot"></div><p>Apertura a equipos de toda la región patagónica</p></div>
+      <p class="section-label">Competencia</p>
+      <h2 class="section-title">Torneos organizados</h2>
+      <p class="section-body">Estamos armando una liga estable de fútbol 7 en el complejo. Elegí una categoría para ver más.</p>
+
+      <div class="ligas-wrap">
+
+        <!-- Femenino -->
+        <div class="ligas-grupo">
+          <div class="ligas-grupo-header">
+            <span class="ligas-grupo-badge activa">Activa</span>
+            <span class="ligas-grupo-titulo">Liga de Fútbol 7 Femenino</span>
           </div>
-          <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco" target="_blank" rel="noopener" style="margin-top:2rem;display:inline-block;">Ver fixture en Timbo ↗</a>
+          <div class="ligas-grid">
+
+            <div class="liga-banner-card">
+              <img class="liga-banner-img" src="banners%20torneos/liga%20de%20honor%20femenina.png" alt="Liga de Fútbol 7 Femenino - Categoría Liga de Honor" loading="lazy">
+              <div class="liga-banner-actions">
+                <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
+                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Liga%20de%20Honor%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="liga-banner-card">
+              <img class="liga-banner-img" src="banners%20torneos/femenino%20primera%20A.png" alt="Liga de Fútbol 7 Femenino - Categoría Primera A" loading="lazy">
+              <div class="liga-banner-actions">
+                <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
+                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Primera%20A%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="liga-banner-card">
+              <img class="liga-banner-img" src="banners%20torneos/femenino%20%2B30.png" alt="Liga de Fútbol 7 Femenino - Categoría +30" loading="lazy">
+              <div class="liga-banner-actions">
+                <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
+                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20%2B30%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="liga-banner-card">
+              <img class="liga-banner-img" src="banners%20torneos/reserva%20-18.png" alt="Liga de Fútbol 7 Femenino - Categoría Reserva -18" loading="lazy">
+              <div class="liga-banner-actions">
+                <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
+                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Reserva%20-18%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="torneos-cta-box">
-          <h3>¿Querés inscribir tu equipo?</h3>
-          <p>Consultanos por WhatsApp o email. Te damos toda la info sobre fechas, categorías y costos de inscripción.</p>
-          <a href="https://wa.me/5492804684805" class="btn-blanco" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+
+        <!-- Masculino -->
+        <div class="ligas-grupo">
+          <div class="ligas-grupo-header">
+            <span class="ligas-grupo-badge proxima">Próximamente</span>
+            <span class="ligas-grupo-titulo">Liga de Fútbol 7 Masculino</span>
+          </div>
+          <div class="ligas-grid">
+
+            <div class="liga-banner-card">
+              <img class="liga-banner-img" src="banners%20torneos/Liga%20de%20honor%20Masculina.png" alt="Liga de Fútbol 7 Masculino - Categoría Liga de Honor" loading="lazy">
+              <div class="liga-banner-actions">
+                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20sumarme%20a%20Liga%20de%20Honor%20Masculino" class="btn-blanco btn-sm" target="_blank" rel="noopener">Avisenme por WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="liga-banner-card">
+              <img class="liga-banner-img" src="banners%20torneos/masculina%20%2B35.png" alt="Liga de Fútbol 7 Masculino - Categoría +35" loading="lazy">
+              <div class="liga-banner-actions">
+                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20sumarme%20a%20%2B35%20Masculino" class="btn-blanco btn-sm" target="_blank" rel="noopener">Avisenme por WhatsApp</a>
+              </div>
+            </div>
+
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -725,7 +786,7 @@
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if(e.isIntersecting) e.target.style.opacity = '1'; });
     }, {threshold: 0.08});
-    document.querySelectorAll('.sched-card, .actividad-card, .pilar, .reserva-card').forEach(el => {
+    document.querySelectorAll('.sched-card, .actividad-card, .pilar, .reserva-card, .liga-banner-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transition = 'opacity 0.45s ease';
       observer.observe(el);
