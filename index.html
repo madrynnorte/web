@@ -179,6 +179,14 @@
     .liga-banner-img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
     .liga-banner-actions { display:flex; gap:.5rem; padding:.7rem; flex-wrap:wrap; }
     .liga-banner-actions a { flex:1; text-align:center; }
+    .liga-banner-toggle { display:block; width:100%; text-align:left; background:none; border:none; color:#cfe3d4; font-family:'Oswald',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:.7rem .7rem 0; cursor:pointer; }
+    .liga-banner-toggle::after { content:' ▾'; }
+    .liga-banner-card.open .liga-banner-toggle::after { content:' ▴'; }
+    .liga-banner-info { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .liga-banner-card.open .liga-banner-info { max-height:520px; }
+    .liga-banner-info ul { list-style:none; padding:.6rem .7rem 0; margin:0; display:flex; flex-direction:column; gap:.4rem; }
+    .liga-banner-info li { font-size:.78rem; color:#c0d8c8; line-height:1.5; }
+    .liga-banner-info li strong { color:var(--blanco); }
     .btn-blanco.btn-sm { font-size:.78rem; padding:.65rem .7rem; }
     .btn-blanco { font-family:'Oswald',sans-serif; font-size:.88rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; background:var(--blanco); color:var(--verde-oscuro); padding:.8rem 1.6rem; text-decoration:none; border-radius:3px; display:inline-block; transition:opacity .2s; }
     .btn-blanco:hover { opacity:.9; }
@@ -484,6 +492,17 @@
 
             <div class="liga-banner-card">
               <img class="liga-banner-img" src="banners%20torneos/liga%20de%20honor%20femenina.png" alt="Liga de Fútbol 7 Femenino - Categoría Liga de Honor" loading="lazy">
+              <button type="button" class="liga-banner-toggle">Ver información completa</button>
+              <div class="liga-banner-info">
+                <ul>
+                  <li><strong>Nivel:</strong> recreativo · sin equipos federados</li>
+                  <li><strong>Seguimiento web:</strong> fixture, posiciones y resultados con actualización constante en Timbo</li>
+                  <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
+                  <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
+                  <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
+                  <li>Cupos limitados — la inscripción se confirma con el pago.</li>
+                </ul>
+              </div>
               <div class="liga-banner-actions">
                 <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
                 <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Liga%20de%20Honor%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
@@ -492,6 +511,17 @@
 
             <div class="liga-banner-card">
               <img class="liga-banner-img" src="banners%20torneos/femenino%20primera%20A.png" alt="Liga de Fútbol 7 Femenino - Categoría Primera A" loading="lazy">
+              <button type="button" class="liga-banner-toggle">Ver información completa</button>
+              <div class="liga-banner-info">
+                <ul>
+                  <li><strong>Nivel:</strong> recreativo · sin equipos federados</li>
+                  <li><strong>Seguimiento web:</strong> fixture, posiciones y resultados con actualización constante en Timbo</li>
+                  <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
+                  <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
+                  <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
+                  <li>Cupos limitados — la inscripción se confirma con el pago.</li>
+                </ul>
+              </div>
               <div class="liga-banner-actions">
                 <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
                 <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Primera%20A%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
@@ -500,6 +530,17 @@
 
             <div class="liga-banner-card">
               <img class="liga-banner-img" src="banners%20torneos/femenino%20%2B30.png" alt="Liga de Fútbol 7 Femenino - Categoría +30" loading="lazy">
+              <button type="button" class="liga-banner-toggle">Ver información completa</button>
+              <div class="liga-banner-info">
+                <ul>
+                  <li><strong>Nivel:</strong> recreativo · sin equipos federados</li>
+                  <li><strong>Seguimiento web:</strong> fixture, posiciones y resultados con actualización constante en Timbo</li>
+                  <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
+                  <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
+                  <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
+                  <li>Cupos limitados — la inscripción se confirma con el pago.</li>
+                </ul>
+              </div>
               <div class="liga-banner-actions">
                 <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
                 <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20%2B30%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
@@ -508,6 +549,17 @@
 
             <div class="liga-banner-card">
               <img class="liga-banner-img" src="banners%20torneos/reserva%20-18.png" alt="Liga de Fútbol 7 Femenino - Categoría Reserva -18" loading="lazy">
+              <button type="button" class="liga-banner-toggle">Ver información completa</button>
+              <div class="liga-banner-info">
+                <ul>
+                  <li><strong>Nivel:</strong> recreativo · sin equipos federados</li>
+                  <li><strong>Seguimiento web:</strong> fixture, posiciones y resultados con actualización constante en Timbo</li>
+                  <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
+                  <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
+                  <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
+                  <li>Cupos limitados — la inscripción se confirma con el pago.</li>
+                </ul>
+              </div>
               <div class="liga-banner-actions">
                 <a href="https://timbo.futbol/torneos/madrynnorte" class="btn-blanco btn-sm" target="_blank" rel="noopener">Timbo ↗</a>
                 <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Reserva%20-18%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
@@ -764,6 +816,11 @@
     toggle.addEventListener('click', () => links.classList.toggle('open'));
     document.querySelectorAll('#nav-links a').forEach(a => {
       a.addEventListener('click', () => links.classList.remove('open'));
+    });
+
+    // Torneos: info desplegable por categoría
+    document.querySelectorAll('.liga-banner-toggle').forEach(btn => {
+      btn.addEventListener('click', () => btn.closest('.liga-banner-card').classList.toggle('open'));
     });
 
     // Schedule filter tabs
