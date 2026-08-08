@@ -108,44 +108,64 @@
     .pilar-titulo { font-family:'Oswald',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--verde-oscuro); margin-bottom:.3rem; }
     .pilar p { font-size:.82rem; color:#666; line-height:1.5; }
 
-    /* ── SCHEDULE / ACADEMIA ── */
+    /* ── ACADEMIA — BLOQUES POR DISCIPLINA ── */
     #academia { background:var(--negro); }
     #academia .section-title { color:var(--blanco); }
     #academia .section-body { color:#888; }
 
-    .schedule-tabs { display:flex; gap:0; margin:2.5rem 0 0; flex-wrap:wrap; }
-    .tab-btn {
-      font-family:'Oswald',sans-serif; font-size:.8rem; font-weight:600;
-      letter-spacing:.1em; text-transform:uppercase;
-      background:#1a1a1a; color:#666; border:none; cursor:pointer;
-      padding:.7rem 1.4rem; border-bottom:2px solid #222;
-      transition:color .2s, background .2s, border-color .2s;
-    }
-    .tab-btn.active { color:var(--blanco); border-bottom:2px solid var(--rojo); background:#111; }
-    .tab-btn:hover { color:#ccc; }
+    .disc-blocks { display:flex; flex-direction:column; gap:2px; margin-top:3rem; }
 
-    .schedule-grid {
-      display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-      gap:1px; background:#222; margin-top:0;
+    .disc-block { overflow:hidden; border-radius:0; }
+
+    .disc-header {
+      display:flex; align-items:center; gap:1.2rem;
+      padding:1.4rem 2rem; position:relative;
     }
-    .sched-card {
-      background:#111; padding:2rem 1.8rem;
-      display:none; flex-direction:column; gap:.5rem;
-      border-top:3px solid transparent;
-      transition:border-color .2s;
+    .disc-header::after {
+      content:''; position:absolute; bottom:0; left:0; right:0;
+      height:1px; background:rgba(255,255,255,.06);
     }
-    .sched-card.visible { display:flex; }
-    .sched-card:hover { border-top-color:var(--rojo); }
-    .sched-sport { font-family:'Oswald',sans-serif; font-size:1.3rem; font-weight:700; text-transform:uppercase; color:var(--blanco); }
-    .sched-sub { font-size:.8rem; color:var(--verde); font-weight:500; text-transform:uppercase; letter-spacing:.07em; }
-    .sched-days { font-family:'Oswald',sans-serif; font-size:.85rem; color:#bbb; margin-top:.5rem; }
-    .sched-time { font-family:'Oswald',sans-serif; font-size:1rem; font-weight:600; color:#fff; }
-    .sched-profe { font-size:.78rem; color:#666; margin-top:.3rem; }
-    .sched-badge {
-      display:inline-block; margin-top:.8rem; align-self:flex-start;
-      font-family:'Oswald',sans-serif; font-size:.65rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase;
-      color:var(--verde); border:1px solid var(--verde); padding:.2rem .55rem; border-radius:2px;
+    .disc-futbol { background:linear-gradient(135deg,#1a0000,#2a0808); border-left:4px solid var(--rojo); }
+    .disc-hockey  { background:linear-gradient(135deg,#001a08,#042a10); border-left:4px solid var(--verde); }
+
+    .disc-icon { font-size:2rem; flex-shrink:0; }
+    .disc-nombre {
+      font-family:'Oswald',sans-serif; font-size:1.6rem; font-weight:700;
+      text-transform:uppercase; letter-spacing:.06em; color:var(--blanco); line-height:1;
     }
+    .disc-profe-header { font-size:.75rem; color:#888; margin-top:.25rem; letter-spacing:.04em; }
+
+    .disc-actividades {
+      background:#0d0d0d;
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:1px; background-color:#1a1a1a;
+    }
+    .disc-act {
+      background:#0d0d0d; padding:1.8rem 2rem;
+      display:flex; flex-direction:column; gap:.4rem;
+      border-bottom:3px solid transparent;
+      transition:background .2s, border-color .2s;
+    }
+    .disc-act:hover { background:#111; }
+    .disc-futbol-act:hover { border-bottom-color:var(--rojo); }
+    .disc-hockey-act:hover  { border-bottom-color:var(--verde); }
+
+    .disc-act-nombre {
+      font-family:'Oswald',sans-serif; font-size:1.1rem; font-weight:600;
+      text-transform:uppercase; letter-spacing:.04em; color:var(--blanco);
+    }
+    .disc-act-quien { font-size:.75rem; color:#666; margin-bottom:.4rem; }
+    .disc-horario-row { display:flex; align-items:baseline; gap:.6rem; margin-top:.3rem; }
+    .disc-dias { font-family:'Oswald',sans-serif; font-size:.82rem; color:#aaa; flex-shrink:0; }
+    .disc-hora { font-family:'Oswald',sans-serif; font-size:.95rem; font-weight:600; color:#fff; }
+    .disc-act-profe { font-size:.73rem; color:#555; margin-top:.6rem; }
+    .disc-act-tag {
+      align-self:flex-start; margin-top:.7rem;
+      font-family:'Oswald',sans-serif; font-size:.62rem; font-weight:500;
+      letter-spacing:.1em; text-transform:uppercase; padding:.2rem .55rem; border-radius:2px;
+    }
+    .tag-rojo { color:var(--rojo); border:1px solid var(--rojo); }
+    .tag-verde { color:var(--verde); border:1px solid var(--verde); }
 
     /* ── ACTIVIDADES (canchas) ── */
     #actividades { background:#111; }
@@ -299,6 +319,9 @@
       .sobre-escudo img { width:160px; }
       .pilares { grid-template-columns:1fr; }
       .actividades-grid { grid-template-columns:1fr; }
+      .disc-actividades { grid-template-columns:1fr; }
+      .disc-header { padding:1.1rem 1.4rem; }
+      .disc-act { padding:1.4rem 1.4rem; }
       .hero-stats { gap:1.8rem; bottom:2rem; }
       .hero-content { padding:7rem 1.5rem 5rem; }
       section { padding:4rem 1.5rem; }
@@ -391,84 +414,79 @@
       <h2 class="section-title">Cronograma de Actividades</h2>
       <p class="section-body">Clases regulares con profesores especializados. Seleccioná la disciplina para ver los horarios.</p>
 
-      <div class="schedule-tabs">
-        <button class="tab-btn active" data-filter="all">Todos</button>
-        <button class="tab-btn" data-filter="futbol">Fútbol</button>
-        <button class="tab-btn" data-filter="hockey">Hockey</button>
-        <button class="tab-btn" data-filter="futsal">Futsal</button>
-        <button class="tab-btn" data-filter="basquet">Básquet</button>
-      </div>
+      <div class="disc-blocks">
 
-      <div class="schedule-grid">
-        <!-- FÚTBOL MASCULINO/FEMENINO -->
-        <div class="sched-card visible" data-cat="futbol">
-          <div class="sched-sport">⚽ Entrenamiento Fútbol</div>
-          <div class="sched-sub">Masculino y Femenino · Mayores y Menores</div>
-          <div class="sched-days">Lunes y Miércoles</div>
-          <div class="sched-time">21:00 — 22:30 hs</div>
-          <div class="sched-days" style="margin-top:.4rem">Martes y Jueves</div>
-          <div class="sched-time">09:00 — 10:30 hs &nbsp;·&nbsp; 15:00 — 16:30 hs</div>
-          <div class="sched-profe">Prof. Ignacio Pugh</div>
-          <span class="sched-badge">Academia</span>
+        <!-- ⚽ FÚTBOL -->
+        <div class="disc-block">
+          <div class="disc-header disc-futbol">
+            <span class="disc-icon">⚽</span>
+            <div>
+              <div class="disc-nombre">Fútbol</div>
+              <div class="disc-profe-header">Prof. Ignacio Pugh</div>
+            </div>
+          </div>
+          <div class="disc-actividades">
+            <div class="disc-act disc-futbol-act">
+              <div class="disc-act-nombre">Entrenamiento de Fútbol</div>
+              <div class="disc-act-quien">Masculino y Femenino · Todas las edades</div>
+              <div class="disc-horario-row">
+                <span class="disc-dias">Lunes y Miércoles</span>
+                <span class="disc-hora">21:00 — 22:30 hs</span>
+              </div>
+              <div class="disc-act-profe">Prof. Ignacio Pugh</div>
+              <span class="disc-act-tag tag-rojo">Academia</span>
+            </div>
+          </div>
         </div>
 
-        <!-- FÚTBOL FEMENINO -->
-        <div class="sched-card visible" data-cat="futbol">
-          <div class="sched-sport">⚽ Fútbol Femenino</div>
-          <div class="sched-sub">Todas las edades</div>
-          <div class="sched-days">Martes y Jueves</div>
-          <div class="sched-time">15:30 — 16:30 hs</div>
-          <div class="sched-profe">Prof. Ignacio Pugh</div>
-          <span class="sched-badge">Academia</span>
+        <!-- 🏑 HOCKEY -->
+        <div class="disc-block">
+          <div class="disc-header disc-hockey">
+            <span class="disc-icon">🏑</span>
+            <div>
+              <div class="disc-nombre">Hockey</div>
+              <div class="disc-profe-header">Prof. Angela Perez</div>
+            </div>
+          </div>
+          <div class="disc-actividades">
+
+            <div class="disc-act disc-hockey-act">
+              <div class="disc-act-nombre">Mini Hockey</div>
+              <div class="disc-act-quien">Formativo · +5 años · Todas las edades</div>
+              <div class="disc-horario-row">
+                <span class="disc-dias">Lunes y Miércoles</span>
+                <span class="disc-hora">15:00 — 16:30 hs</span>
+              </div>
+              <div class="disc-act-profe">Prof. Angela Perez</div>
+              <span class="disc-act-tag tag-verde">Formativo</span>
+            </div>
+
+            <div class="disc-act disc-hockey-act">
+              <div class="disc-act-nombre">Hockey</div>
+              <div class="disc-act-quien">Mayores · Con o sin experiencia</div>
+              <div class="disc-horario-row">
+                <span class="disc-dias">Martes</span>
+                <span class="disc-hora">20:00 — 22:00 hs</span>
+              </div>
+              <div class="disc-horario-row">
+                <span class="disc-dias">Viernes</span>
+                <span class="disc-hora">18:00 — 20:00 hs</span>
+              </div>
+              <div class="disc-horario-row">
+                <span class="disc-dias">Sábado</span>
+                <span class="disc-hora">15:00 — 17:00 hs</span>
+              </div>
+              <div class="disc-act-profe">Prof. Angela Perez</div>
+              <span class="disc-act-tag tag-verde">Academia</span>
+            </div>
+
+          </div>
         </div>
 
-        <!-- FUTSAL -->
-        <div class="sched-card visible" data-cat="futsal">
-          <div class="sched-sport">👟 Futsal</div>
-          <div class="sched-sub">Masculino y Femenino · +16 años</div>
-          <div class="sched-days">Lunes, Miércoles y Viernes</div>
-          <div class="sched-time">18:00 — 20:00 hs</div>
-          <div class="sched-profe">Prof. Marcos Santana</div>
-          <span class="sched-badge">Academia</span>
-        </div>
-
-        <!-- BÁSQUET -->
-        <div class="sched-card visible" data-cat="basquet">
-          <div class="sched-sport">🏀 Básquet</div>
-          <div class="sched-sub">Masculino y Femenino · Adolescentes y Adultos</div>
-          <div class="sched-days">Lunes y Miércoles</div>
-          <div class="sched-time">20:00 — 21:00 hs</div>
-          <div class="sched-profe">Prof. Male Gerez</div>
-          <span class="sched-badge">Academia</span>
-        </div>
-
-        <!-- MAXI HOCKEY -->
-        <div class="sched-card visible" data-cat="hockey">
-          <div class="sched-sport">🏑 Maxi Hockey</div>
-          <div class="sched-sub">Mayores · Con o sin experiencia</div>
-          <div class="sched-days">Martes</div>
-          <div class="sched-time">20:00 — 22:00 hs</div>
-          <div class="sched-days" style="margin-top:.4rem">Viernes</div>
-          <div class="sched-time">18:00 — 20:00 hs</div>
-          <div class="sched-days" style="margin-top:.4rem">Sábado</div>
-          <div class="sched-time">15:00 — 17:00 hs</div>
-          <div class="sched-profe">Prof. Angela Perez</div>
-          <span class="sched-badge">Academia</span>
-        </div>
-
-        <!-- MINI HOCKEY -->
-        <div class="sched-card visible" data-cat="hockey">
-          <div class="sched-sport">🏑 Mini Hockey</div>
-          <div class="sched-sub">Formativo · +5 años · Todas las edades</div>
-          <div class="sched-days">Lunes y Miércoles</div>
-          <div class="sched-time">15:00 — 16:30 hs</div>
-          <div class="sched-profe">Prof. Angela Perez</div>
-          <span class="sched-badge">Formativo</span>
-        </div>
       </div>
 
       <p style="margin-top:2rem;font-size:.82rem;color:#666;text-align:center;">
-        ¿Querés sumarte? Consultá disponibilidad por 
+        ¿Querés sumarte? Consultá disponibilidad por
         <a href="https://wa.me/5492804684805" style="color:var(--verde);text-decoration:none;" target="_blank">WhatsApp</a>
       </p>
     </div>
