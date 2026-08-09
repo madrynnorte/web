@@ -229,7 +229,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <input class="fc" id="inp-pwd" type="password" placeholder="••••••••" autocomplete="current-password">
     </div>
     <button class="btn-p" id="btn-login" onclick="doLogin()">Ingresar</button>
-    <p class="login-hint">¿Olvidaste tu contraseña? Contactá al club.</p>
+    <p class="login-hint"><a href="#" onclick="abrirOlvide();return false" style="color:var(--acc);text-decoration:none">¿Olvidaste tu contraseña?</a></p>
+  </div>
+</div>
+
+<!-- MODAL OLVIDÉ CONTRASEÑA -->
+<div class="mbg" id="m-olvide" onclick="if(event.target===this)cerrarOlvide()">
+  <div class="mpan" style="max-width:340px">
+    <div class="mhdr"><span>🔑 Recuperar contraseña</span><button class="mcls" onclick="cerrarOlvide()">✕</button></div>
+    <div style="padding:16px">
+      <p style="font-size:.85rem;color:var(--txt2);margin-bottom:14px;line-height:1.5">Ingresá tu DNI. Si tenés un email registrado, te enviamos una contraseña temporal.</p>
+      <div class="err-box" id="olvide-err"></div>
+      <div class="fgroup"><label class="fl">DNI</label><input class="fc" id="olvide-dni" type="text" inputmode="numeric" placeholder="Número de documento"></div>
+      <button class="btn-p" id="btn-olvide" onclick="doOlvide()">Enviar contraseña temporal</button>
+      <div id="olvide-ok" style="display:none;text-align:center;padding:12px;color:#22c55e;font-size:.9rem"></div>
+    </div>
   </div>
 </div>
 
@@ -359,6 +373,8 @@ function post(body){
     headers:{'Content-Type':'text/plain'},body:JSON.stringify(body)}).then(r=>r.json());
 }
 function fmtF(s){if(!s)return'—';const p=s.split('-');return p.length<3?s:p[2]+'/'+p[1]+'/'+p[0]}
+function waUrl(tel){if(!tel)return null;var d=String(tel).replace(/\D/g,'');if(!d)return null;if(d.startsWith('54'))return'https://wa.me/'+d;if(d.startsWith('0'))d=d.slice(1);return'https://wa.me/549'+d;}
+function waBtnHtml(tel){var url=waUrl(tel);if(!url)return'—';return`<a href="${url}" target="_blank" rel="noopener" style="color:#25d366;text-decoration:none" title="Abrir WhatsApp">📱 ${tel}</a>`}
 function fmtM(s){if(!s)return'—';const ms=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];const p=s.split('-');return p.length<2?s:ms[parseInt(p[1])-1]+' '+p[0]}
 function hoy(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function toast(msg){var b=document.getElementById('toast-box');b.textContent=msg;b.classList.add('vis');setTimeout(()=>b.classList.remove('vis'),2200)}
@@ -451,6 +467,30 @@ async function doLogin(){
 }
 function showErr(b,m){b.textContent=m;b.classList.add('vis')}
 document.getElementById('inp-pwd').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});
+
+// ─── OLVIDÉ CONTRASEÑA ────────────────────────────────────────────
+function abrirOlvide(){
+  document.getElementById('olvide-err').classList.remove('vis');
+  document.getElementById('olvide-ok').style.display='none';
+  document.getElementById('olvide-dni').value='';
+  document.getElementById('m-olvide').classList.add('open');
+}
+function cerrarOlvide(){document.getElementById('m-olvide').classList.remove('open')}
+async function doOlvide(){
+  var errB=document.getElementById('olvide-err'),btn=document.getElementById('btn-olvide');
+  errB.classList.remove('vis');
+  var dni=document.getElementById('olvide-dni').value.trim();
+  if(!dni){showErr(errB,'Ingresá tu DNI');return}
+  btn.disabled=true;btn.innerHTML='<span class="spin"></span> Enviando…';
+  try{
+    var r=await post({accion:'reset_password',dni});
+    if(!r.ok){showErr(errB,r.error||'Error');return}
+    document.getElementById('olvide-ok').textContent='✅ '+r.data.message;
+    document.getElementById('olvide-ok').style.display='block';
+    btn.style.display='none';
+  }catch(e){showErr(errB,'Error de conexión. Verificá tu internet.')}
+  finally{btn.disabled=false;if(btn.style.display!=='none')btn.innerHTML='Enviar contraseña temporal'}
+}
 document.getElementById('inp-dni').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('inp-pwd').focus()});
 
 // ─── CARGAR PERFIL ────────────────────────────────────────────────────
@@ -738,7 +778,8 @@ function renderActsProfe(){
           ?`<img src="${al.foto}" class="al-chip-foto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`+
            `<div class="al-chip-foto-ph" style="display:none">👤</div>`
           :`<div class="al-chip-foto-ph">👤</div>`;
-        return`<div class="al-chip">${foto}<div style="flex:1;min-width:0"><div style="font-size:.88rem;font-weight:500">${al.nombre} ${al.apellido||''}</div><div style="font-size:.72rem;color:var(--txt2)">DNI ${al.dni||'—'}</div></div></div>`;
+        const waTel=al.telefono?`<span style="margin-left:6px">${waBtnHtml(al.telefono)}</span>`:'';
+        return`<div class="al-chip">${foto}<div style="flex:1;min-width:0"><div style="font-size:.88rem;font-weight:500">${al.nombre} ${al.apellido||''}</div><div style="font-size:.72rem;color:var(--txt2)">DNI ${al.dni||'—'}${waTel}</div></div></div>`;
       }).join(''):'<div style="font-size:.8rem;color:var(--txt2);padding:6px 0">Sin alumnos inscriptos</div>';
       return`<div class="disc-act-blk">
         <div class="disc-act-nom">${a.nombre}</div>
@@ -782,7 +823,7 @@ function renderMiPerfilProfe(){
   </div>
   <div class="card" style="text-align:center;padding:18px">
     <div style="font-size:.75rem;color:var(--txt2);margin-bottom:8px">Gestión completa de la app</div>
-    <a href="./index.html" style="display:inline-block;background:linear-gradient(135deg,var(--rojo),var(--rojo2));color:#fff;text-decoration:none;border-radius:10px;padding:11px 22px;font-size:.9rem;font-weight:600">📲 Abrir app de gestión</a>
+    <a href="./gestion.html" style="display:inline-block;background:linear-gradient(135deg,var(--rojo),var(--rojo2));color:#fff;text-decoration:none;border-radius:10px;padding:11px 22px;font-size:.9rem;font-weight:600">📲 Abrir app de gestión</a>
   </div>`;
 }
 
@@ -860,6 +901,7 @@ async function guardarPerfil(){
     }
     datos.telefono=document.getElementById('edit-tel').value.trim();
     datos.email=document.getElementById('edit-email').value.trim();
+    if(!datos.email)throw new Error('El email es obligatorio (se usa para recuperar la contraseña)');
     if(_editTipo==='alumno'){
       datos.contacto_emergencia=document.getElementById('edit-emerg').value.trim();
       datos.salud=document.getElementById('edit-salud').value.trim();
