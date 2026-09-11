@@ -11,8 +11,67 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madryn Norte Complejo Deportivo | Puerto Madryn</title>
-  <meta name="description" content="Madryn Norte Complejo Deportivo - Fútbol, Hockey, Futsal, Básquet y más en Puerto Madryn. Torneos, canchas, academia y festejos.">
+  <title>Madryn Norte | Actividades, torneos, canchas y festejos en Puerto Madryn</title>
+  <meta name="description" content="Fútbol femenino y masculino, entrenamiento de arqueros, hockey, alquiler de canchas, torneos y festejos deportivos en Puerto Madryn.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.madrynnorte.com.ar/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Madryn Norte Complejo Deportivo">
+  <meta property="og:title" content="Madryn Norte | Actividades, torneos, canchas y festejos en Puerto Madryn">
+  <meta property="og:description" content="Fútbol femenino y masculino, entrenamiento de arqueros, hockey, alquiler de canchas, torneos y festejos deportivos en Puerto Madryn.">
+  <meta property="og:url" content="https://www.madrynnorte.com.ar/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23fff' stroke='%23c0201d' stroke-width='5' d='M8 6h48v31c0 12-10 19-24 23C18 56 8 49 8 37z'/%3E%3Cpath fill='%231a6b2e' d='M12 36h40v3c0 8-8 14-20 18-12-4-20-10-20-18z'/%3E%3Ccircle cx='32' cy='38' r='8' fill='%23fff' stroke='%230d0d0d' stroke-width='3'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "@id": "https://www.madrynnorte.com.ar/#complejo",
+    "name": "Madryn Norte Complejo Deportivo",
+    "url": "https://www.madrynnorte.com.ar/",
+    "description": "Complejo deportivo en Puerto Madryn con fútbol femenino y masculino, entrenamiento de arqueros, hockey, alquiler de canchas, torneos y festejos.",
+    "telephone": "+54 9 280 468-4805",
+    "email": "info@madrynnorte.com.ar",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Obreros Unidos 1200",
+      "addressLocality": "Puerto Madryn",
+      "addressRegion": "Chubut",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -42.75129300597418,
+      "longitude": -65.051240981258
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "15:00",
+      "closes": "24:00"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/madryn_norte_complejodeportivo/",
+      "https://www.youtube.com/@madrynnorte",
+      "https://timbo.futbol/torneos/madrynnorte"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Actividades y servicios de Madryn Norte",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Equipo de fútbol femenino para mayores de 18 años"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Entrenamiento de arqueros masculino y femenino para mayores"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Entrenamiento de fútbol masculino y femenino para mayores y menores"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fútbol femenino de 11 a 17 años"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fútbol masculino de 11 a 17 años"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mini Hockey formativo para niñas y niños desde 5 años"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Entrenamiento de hockey para mayores con o sin experiencia"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Alquiler de canchas deportivas en Puerto Madryn"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cumpleaños, festejos y reuniones con canchas, parrilla y buffet en Puerto Madryn"}}
+      ]
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -167,6 +226,37 @@
     .tag-rojo { color:var(--rojo); border:1px solid var(--rojo); }
     .tag-verde { color:var(--verde); border:1px solid var(--verde); }
 
+
+    .disc-act-media { padding:0; overflow:hidden; }
+    .disc-act-media img { width:100%; aspect-ratio:4/5; object-fit:contain; object-position:center; display:block; background:#080808; }
+    .disc-act-media .disc-act-copy { padding:1.35rem 1.5rem 1.55rem; display:flex; flex-direction:column; gap:.4rem; }
+    .proximos-torneos { margin-top:2.5rem; }
+    .proximos-titulo { font-family:'Oswald',sans-serif; font-size:1.35rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--blanco); margin-bottom:1rem; }
+    .proximos-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2rem; }
+    .proximo-card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); border-radius:8px; overflow:hidden; }
+    .proximo-card img { width:100%; aspect-ratio:4/3; object-fit:cover; object-position:top; display:block; }
+    .proximo-info { padding:1.15rem 1.2rem 1.3rem; }
+    .proximo-kicker { font-family:'Oswald',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:#91d5a4; margin-bottom:.35rem; }
+    .proximo-nombre { font-family:'Oswald',sans-serif; font-size:1.25rem; font-weight:700; text-transform:uppercase; color:var(--blanco); line-height:1.15; }
+    .proximo-datos { display:flex; flex-wrap:wrap; gap:.45rem; margin:.85rem 0 1rem; }
+    .proximo-dato { font-family:'Oswald',sans-serif; font-size:.72rem; color:#e1f0e5; background:rgba(0,0,0,.2); padding:.35rem .55rem; border-radius:3px; }
+    .ligas-compactas { margin-top:2.3rem; padding-top:1.7rem; border-top:1px solid rgba(255,255,255,.18); }
+    .ligas-compactas-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+    .ligas-compactas-titulo { font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--blanco); }
+    .ligas-estado { font-family:'Oswald',sans-serif; font-size:.65rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#dcebe0; border:1px solid rgba(255,255,255,.35); padding:.3rem .6rem; border-radius:20px; }
+    .ligas-compactas-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }
+    .liga-compacta { background:rgba(0,0,0,.14); padding:1rem 1.1rem; border-radius:5px; }
+    .liga-compacta strong { display:block; font-family:'Oswald',sans-serif; font-size:.9rem; text-transform:uppercase; color:var(--blanco); margin-bottom:.55rem; }
+    .categoria-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .categoria-chip { font-size:.74rem; color:#d9eadf; border:1px solid rgba(255,255,255,.24); padding:.28rem .5rem; border-radius:3px; }
+    .liga-links { display:flex; gap:.7rem; flex-wrap:wrap; margin-top:1rem; }
+    .liga-link { font-family:'Oswald',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--blanco); text-decoration:none; border-bottom:1px solid rgba(255,255,255,.55); padding-bottom:2px; }
+    @media (max-width:720px) {
+      .proximos-grid, .ligas-compactas-grid { grid-template-columns:1fr; }
+      .proximo-card img { aspect-ratio:16/13; }
+      .disc-act-media img { aspect-ratio:4/5; }
+    }
+
     /* ── ACTIVIDADES (canchas) ── */
     #actividades { background:#111; }
     #actividades .section-title { color:var(--blanco); }
@@ -226,6 +316,32 @@
     .btn-blanco.btn-sm { font-size:.78rem; padding:.65rem .7rem; }
     .btn-blanco { font-family:'Oswald',sans-serif; font-size:.88rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; background:var(--blanco); color:var(--verde-oscuro); padding:.8rem 1.6rem; text-decoration:none; border-radius:3px; display:inline-block; transition:opacity .2s; }
     .btn-blanco:hover { opacity:.9; }
+
+
+    #youtube-destacado { background:#111; padding:1.35rem 2rem; border-top:1px solid #282828; border-bottom:1px solid #282828; }
+    #youtube-destacado .youtube-banner { max-width:1100px; margin:0 auto; box-shadow:0 12px 35px rgba(0,0,0,.22); }
+    #youtube-destacado .youtube-title { font-size:1.2rem; }
+    .youtube-banner { display:flex; align-items:center; justify-content:space-between; gap:1.2rem; margin-top:1.2rem; padding:1.1rem 1.25rem; background:#0d0d0d; border-left:4px solid #ff0033; border-radius:5px; }
+    .youtube-banner-copy { display:flex; align-items:center; gap:.9rem; }
+    .youtube-icon { width:42px; height:30px; border-radius:7px; background:#ff0033; color:#fff; display:grid; place-items:center; font-size:.9rem; flex-shrink:0; }
+    .youtube-title { font-family:'Oswald',sans-serif; font-size:1rem; font-weight:700; text-transform:uppercase; color:#fff; }
+    .youtube-sub { font-size:.8rem; color:#aaa; margin-top:.18rem; }
+    .youtube-link { font-family:'Oswald',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:#fff; text-decoration:none; white-space:nowrap; border:1px solid #ff0033; padding:.58rem .8rem; border-radius:3px; }
+    .youtube-link:hover { background:#ff0033; }
+    .canchas-compactas { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:.55rem; margin-top:1.6rem; }
+    .cancha-compacta { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.4rem; min-height:92px; padding:.8rem .45rem; background:#181818; border:1px solid #262626; border-radius:5px; text-align:center; }
+    .cancha-compacta-icon { font-size:1.5rem; line-height:1; }
+    .cancha-compacta-nombre { font-family:'Oswald',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#fff; }
+    .canchas-compactas-cta { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:1rem; padding:1rem 1.15rem; background:#0d0d0d; border:1px solid #292929; border-radius:5px; }
+    .canchas-compactas-info { font-family:'Oswald',sans-serif; font-size:.82rem; color:#aaa; }
+    @media (max-width:900px) { .canchas-compactas { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+    @media (max-width:560px) {
+      .youtube-banner, .canchas-compactas-cta, .torneo-seguimiento { align-items:flex-start; flex-direction:column; }
+      .torneo-seguimiento-flecha { width:100%; font-family:'Oswald',sans-serif; font-size:.82rem; font-weight:600; text-transform:uppercase; }
+      .youtube-link { width:100%; text-align:center; }
+      .canchas-compactas { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .cancha-compacta { min-height:82px; }
+    }
 
     /* ── TROFEO (Necológica) ── */
     #trofeo { background:var(--gris); }
@@ -384,6 +500,19 @@
     </div>
   </section>
 
+  <section id="youtube-destacado" aria-label="Transmisiones de Madryn Norte">
+    <div class="youtube-banner">
+      <div class="youtube-banner-copy">
+        <span class="youtube-icon" aria-hidden="true">▶</span>
+        <div>
+          <div class="youtube-title">Partidos y entrenamientos en vivo</div>
+          <div class="youtube-sub">Torneos, amistosos y toda la actividad de Madryn Norte por YouTube.</div>
+        </div>
+      </div>
+      <a class="youtube-link" href="https://www.youtube.com/@madrynnorte" target="_blank" rel="noopener">Ver canal de Madryn Norte ↗</a>
+    </div>
+  </section>
+
   <!-- SOBRE -->
   <section id="sobre">
     <div class="container">
@@ -411,76 +540,54 @@
   <section id="academia">
     <div class="container">
       <p class="section-label">Academia Deportiva</p>
-      <h2 class="section-title">Cronograma de Actividades</h2>
-      <p class="section-body">Clases regulares con profesores especializados. Seleccioná la disciplina para ver los horarios.</p>
+      <h2 class="section-title">Actividades deportivas en Puerto Madryn</h2>
+      <p class="section-body">Fútbol femenino y masculino, entrenamiento de arqueros y hockey para distintas edades y niveles.</p>
 
       <div class="disc-blocks">
-
-        <!-- ⚽ FÚTBOL -->
         <div class="disc-block">
           <div class="disc-header disc-futbol">
-            <span class="disc-icon">⚽</span>
-            <div>
-              <div class="disc-nombre">Fútbol</div>
-              <div class="disc-profe-header">Prof. Ignacio Pugh</div>
-            </div>
+            <span class="disc-icon" aria-hidden="true">⚽</span>
+            <div><div class="disc-nombre">Fútbol</div><div class="disc-profe-header">Entrenamientos para juveniles y mayores</div></div>
           </div>
           <div class="disc-actividades">
-            <div class="disc-act disc-futbol-act">
-              <div class="disc-act-nombre">Entrenamiento de Fútbol</div>
-              <div class="disc-act-quien">Masculino y Femenino · Todas las edades</div>
-              <div class="disc-horario-row">
-                <span class="disc-dias">Lunes y Miércoles</span>
-                <span class="disc-hora">21:30 — 22:30 hs</span>
-              </div>
-              <div class="disc-act-profe">Prof. Ignacio Pugh</div>
-              <span class="disc-act-tag tag-rojo">Recreativo / Preparación física</span>
-            </div>
+            <article class="disc-act disc-futbol-act disc-act-media">
+              <img src="assets/futbol-femenino-mayores.jpg" alt="Equipo de fútbol femenino para mayores de 18 años en Madryn Norte" loading="lazy" decoding="async">
+              <div class="disc-act-copy"><h3 class="disc-act-nombre">Equipo de fútbol femenino</h3><div class="disc-act-quien">Mujeres mayores de 18 años</div><div class="disc-horario-row"><span class="disc-dias">Lun, Mié y Vie</span><span class="disc-hora">19:30 — 21:00 hs</span></div><div class="disc-act-profe">Prof. Marcos Mendez</div><span class="disc-act-tag tag-rojo">Fútbol femenino +18</span></div>
+            </article>
+            <article class="disc-act disc-futbol-act disc-act-media">
+              <img src="assets/entrenamiento-arqueros.jpg" alt="Entrenamiento de arqueros masculino y femenino en Madryn Norte" loading="lazy" decoding="async">
+              <div class="disc-act-copy"><h3 class="disc-act-nombre">Entrenamiento de arqueros</h3><div class="disc-act-quien">Masculino y femenino · Mayores</div><div class="disc-horario-row"><span class="disc-dias">Lun, Mié y Vie</span><span class="disc-hora">18:00 — 20:00 hs</span></div><div class="disc-act-profe">Prof. Pablo Carcamo</div><span class="disc-act-tag tag-rojo">Arqueros</span></div>
+            </article>
+            <article class="disc-act disc-futbol-act disc-act-media">
+              <img src="assets/entrenamiento-futbol.jpg" alt="Entrenamiento de fútbol masculino y femenino para mayores y menores en Madryn Norte" loading="lazy" decoding="async">
+              <div class="disc-act-copy"><h3 class="disc-act-nombre">Entrenamiento de fútbol</h3><div class="disc-act-quien">Masculino y femenino · Mayores y menores</div><div class="disc-horario-row"><span class="disc-dias">Lun, Mié y Vie</span><span class="disc-hora">21:00 — 22:30 hs</span></div><div class="disc-horario-row"><span class="disc-dias">Mar y Jue</span><span class="disc-hora">09:00 — 10:00 hs</span></div><div class="disc-act-profe">Prof. Marcos Mendez</div><span class="disc-act-tag tag-rojo">Mayores y menores</span></div>
+            </article>
+            <article class="disc-act disc-futbol-act disc-act-media">
+              <img src="assets/futbol-femenino-juvenil.jpg" alt="Fútbol femenino para chicas de 11 a 17 años en Madryn Norte" loading="lazy" decoding="async">
+              <div class="disc-act-copy"><h3 class="disc-act-nombre">Fútbol femenino juvenil</h3><div class="disc-act-quien">Chicas de 11 a 17 años</div><div class="disc-horario-row"><span class="disc-dias">Mar y Jue</span><span class="disc-hora">17:00 — 18:00 hs</span></div><div class="disc-act-profe">Prof. Nuria Lamela</div><span class="disc-act-tag tag-rojo">Femenino 11 a 17</span></div>
+            </article>
+            <article class="disc-act disc-futbol-act disc-act-media">
+              <img src="assets/futbol-masculino-juvenil.jpg" alt="Fútbol masculino para chicos de 11 a 17 años en Madryn Norte" loading="lazy" decoding="async">
+              <div class="disc-act-copy"><h3 class="disc-act-nombre">Fútbol masculino juvenil</h3><div class="disc-act-quien">Chicos de 11 a 17 años</div><div class="disc-horario-row"><span class="disc-dias">Mar y Jue</span><span class="disc-hora">17:00 — 18:00 hs</span></div><div class="disc-act-profe">Prof. Nuria Lamela</div><span class="disc-act-tag tag-rojo">Masculino 11 a 17</span></div>
+            </article>
+            <article class="disc-act disc-futbol-act">
+              <h3 class="disc-act-nombre">Entrenamiento de fútbol</h3><div class="disc-act-quien">Masculino y femenino · Todas las edades</div><div class="disc-horario-row"><span class="disc-dias">Lun y Mié</span><span class="disc-hora">21:30 — 22:30 hs</span></div><div class="disc-act-profe">Prof. Ignacio Pugh</div><span class="disc-act-tag tag-rojo">Recreativo / Preparación física</span>
+            </article>
           </div>
         </div>
 
-        <!-- 🏑 HOCKEY -->
         <div class="disc-block">
           <div class="disc-header disc-hockey">
-            <span class="disc-icon">🏑</span>
-            <div>
-              <div class="disc-nombre">Hockey</div>
-              <div class="disc-profe-header">Prof. Angela Perez</div>
-            </div>
+            <span class="disc-icon" aria-hidden="true">🏑</span>
+            <div><div class="disc-nombre">Hockey</div><div class="disc-profe-header">Prof. Angela Perez</div></div>
           </div>
           <div class="disc-actividades">
-
-            <div class="disc-act disc-hockey-act">
-              <div class="disc-act-nombre">Mini Hockey</div>
-              <div class="disc-act-quien">Todas las edades</div>
-              <div class="disc-horario-row">
-                <span class="disc-dias">Lun, Mié y Vie</span>
-                <span class="disc-hora">16:00 — 18:00 hs</span>
-              </div>
-              <div class="disc-act-profe">Prof. Angela Perez</div>
-              <span class="disc-act-tag tag-verde">Recreativo / Formativo</span>
-            </div>
-
-            <div class="disc-act disc-hockey-act">
-              <div class="disc-act-nombre">Hockey</div>
-              <div class="disc-act-quien">Mayores · Con o sin experiencia</div>
-              <div class="disc-horario-row">
-                <span class="disc-dias">Lun, Mié y Vie</span>
-                <span class="disc-hora">14:00 — 16:00 hs</span>
-              </div>
-              <div class="disc-act-profe">Prof. Angela Perez</div>
-              <span class="disc-act-tag tag-verde">Recreativo / Formativo</span>
-            </div>
-
+            <article class="disc-act disc-hockey-act disc-act-media"><img src="assets/mini-hockey.jpg" alt="Mini Hockey formativo para niñas y niños desde 5 años en Madryn Norte" loading="lazy" decoding="async"><div class="disc-act-copy"><h3 class="disc-act-nombre">Mini Hockey</h3><div class="disc-act-quien">Formativo · Desde 5 años · Niñas y niños</div><div class="disc-horario-row"><span class="disc-dias">Lun, Mié y Vie</span><span class="disc-hora">16:00 — 18:00 hs</span></div><div class="disc-act-profe">Prof. Angela Perez · WhatsApp 280-505-8290</div><span class="disc-act-tag tag-verde">Formativo +5 años</span></div></article>
+            <article class="disc-act disc-hockey-act disc-act-media"><img src="assets/hockey-mayores.jpg" alt="Entrenamiento de hockey para mayores con o sin experiencia en Madryn Norte" loading="lazy" decoding="async"><div class="disc-act-copy"><h3 class="disc-act-nombre">Hockey para mayores</h3><div class="disc-act-quien">Con o sin experiencia</div><div class="disc-horario-row"><span class="disc-dias">Lun, Mié y Vie</span><span class="disc-hora">14:00 — 16:00 hs</span></div><div class="disc-act-profe">Prof. Angela Perez · WhatsApp 280-505-8290</div><span class="disc-act-tag tag-verde">Mayores</span></div></article>
           </div>
         </div>
-
       </div>
-
-      <p style="margin-top:2rem;font-size:.82rem;color:#666;text-align:center;">
-        ¿Querés sumarte? Consultá disponibilidad por
-        <a href="https://wa.me/5492804684805" style="color:var(--verde);text-decoration:none;" target="_blank">WhatsApp</a>
-      </p>
+      <p style="margin-top:2rem;font-size:.82rem;color:#888;text-align:center;">Inscripciones y disponibilidad por <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20consultar%20por%20las%20actividades%20de%20Madryn%20Norte" style="color:#7fcc99;text-decoration:none;" target="_blank" rel="noopener">WhatsApp</a></p>
     </div>
   </section>
 
@@ -488,16 +595,16 @@
   <section id="actividades">
     <div class="container">
       <p class="section-label">Alquiler de Canchas</p>
-      <h2 class="section-title">Reservá tu cancha</h2>
-      <p class="section-body">Todos los días de 15:00 a 24:00 hs. Canchas disponibles para uso libre, partidos y entrenamientos.</p>
-    </div>
-    <div class="actividades-grid" style="max-width:1100px;margin:3rem auto 0;">
-      <div class="actividad-card"><span class="actividad-icon">⚽</span><div class="actividad-nombre">Fútbol 5</div><p class="actividad-desc">Cancha de cemento. Ideal para partidos rápidos y entrenamientos grupales.</p><span class="actividad-badge">Disponible todos los días</span></div>
-      <div class="actividad-card"><span class="actividad-icon">🥅</span><div class="actividad-nombre">Fútbol 7</div><p class="actividad-desc">Cancha de césped sintético. La disciplina estrella del complejo, con torneos organizados de alcance regional.</p><span class="actividad-badge">Disponible todos los días</span></div>
-      <div class="actividad-card"><span class="actividad-icon">👟</span><div class="actividad-nombre">Futsal</div><p class="actividad-desc">Cancha disponible para reservas toda la semana.</p><span class="actividad-badge">Disponible todos los días</span></div>
-      <div class="actividad-card"><span class="actividad-icon">🏑</span><div class="actividad-nombre">Hockey Seven</div><p class="actividad-desc">Cancha de hockey seven sobre superficie sintética. Entrenamiento y competencia.</p><span class="actividad-badge">Disponible todos los días</span></div>
-      <div class="actividad-card"><span class="actividad-icon">🤾</span><div class="actividad-nombre">Handball</div><p class="actividad-desc">Cancha habilitada para entrenamientos y partidos.</p><span class="actividad-badge">Disponible todos los días</span></div>
-      <div class="actividad-card"><span class="actividad-icon">🏀</span><div class="actividad-nombre">Básquet</div><p class="actividad-desc">Aro y espacio para partidos recreativos, entrenamiento y actividades grupales.</p><span class="actividad-badge">Disponible todos los días</span></div>
+      <h2 class="section-title">Canchas deportivas en Puerto Madryn</h2>
+      <div class="canchas-compactas" aria-label="Canchas disponibles">
+        <div class="cancha-compacta"><span class="cancha-compacta-icon" aria-hidden="true">⚽</span><span class="cancha-compacta-nombre">Fútbol 5</span></div>
+        <div class="cancha-compacta"><span class="cancha-compacta-icon" aria-hidden="true">🥅</span><span class="cancha-compacta-nombre">Fútbol 7</span></div>
+        <div class="cancha-compacta"><span class="cancha-compacta-icon" aria-hidden="true">👟</span><span class="cancha-compacta-nombre">Futsal</span></div>
+        <div class="cancha-compacta"><span class="cancha-compacta-icon" aria-hidden="true">🏑</span><span class="cancha-compacta-nombre">Hockey Seven</span></div>
+        <div class="cancha-compacta"><span class="cancha-compacta-icon" aria-hidden="true">🤾</span><span class="cancha-compacta-nombre">Handball</span></div>
+        <div class="cancha-compacta"><span class="cancha-compacta-icon" aria-hidden="true">🏀</span><span class="cancha-compacta-nombre">Básquet</span></div>
+      </div>
+      <div class="canchas-compactas-cta"><div class="canchas-compactas-info">Disponibles todos los días · 15:00 a 24:00 hs</div><a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20reservar%20una%20cancha%20en%20Madryn%20Norte" class="btn-primary" target="_blank" rel="noopener">Reservar cancha</a></div>
     </div>
   </section>
 
@@ -505,191 +612,32 @@
   <section id="torneos">
     <div class="container">
       <p class="section-label">Competencia</p>
-      <h2 class="section-title">Torneos organizados</h2>
-      <p class="torneos-lema">Estamos armando <strong>una liga estable</strong>, con continuidad, ascensos y descensos entre categorías.</p>
-      <p class="torneos-lema-sub">Categorías para todos los niveles y edades. Elegí la tuya y enterate de todo.</p>
+      <h2 class="section-title">Próximos torneos</h2>
 
-      <div class="ligas-wrap">
+      <a href="https://timbo.futbol/torneos/madrynnorte" target="_blank" rel="noopener" class="torneo-seguimiento">
+        <div><div class="torneo-seguimiento-titulo">Seguimiento digital de torneos</div><p class="torneo-seguimiento-sub">Fixture, posiciones y resultados actualizados en Timbo</p></div><span class="torneo-seguimiento-flecha">Ver mi torneo ↗</span>
+      </a>
 
-        <!-- Seguimiento general (Timbo) -->
-        <a href="https://timbo.futbol/torneos/madrynnorte" target="_blank" rel="noopener" class="torneo-seguimiento">
-          <div>
-            <div class="torneo-seguimiento-titulo">¿Estás jugando? Seguí acá tu torneo</div>
-            <p class="torneo-seguimiento-sub">Fixture, posiciones y resultados actualizados en Timbo</p>
-          </div>
-          <span class="torneo-seguimiento-flecha">↗</span>
-        </a>
-
-        <!-- Femenino -->
-        <div class="ligas-grupo">
-          <div class="ligas-grupo-header">
-            <span class="ligas-grupo-badge activa">Activa</span>
-            <span class="ligas-grupo-titulo">Liga de Fútbol 7 Femenino</span>
-          </div>
-          <div class="ligas-grid">
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/liga%20de%20honor%20femenina.png" alt="Liga de Fútbol 7 Femenino - Categoría Liga de Honor" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">Liga de Honor</h4>
-                  <p class="liga-info-desc">Categoría de nivel de competencia superior de las ligas de Madryn Norte. Libre de edad — se permiten jugadoras que están o estuvieron federadas.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Liga%20de%20Honor%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-            </div>
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/femenino%20primera%20A.png" alt="Liga de Fútbol 7 Femenino - Categoría Primera A" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">Primera A</h4>
-                  <p class="liga-info-desc">Sin jugadoras federadas. Libre de edad, nivel competitivo.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Primera%20A%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-            </div>
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/nivel%20inicial.png" alt="Liga de Fútbol 7 Femenino - Categoría Primera B" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">Primera B</h4>
-                  <p class="liga-info-desc">Nivel inicial, para jugadoras que están sumando sus primeros minutos. Todas las edades.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Primera%20B%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-            </div>
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/femenino%20%2B30.png" alt="Liga de Fútbol 7 Femenino - Categoría +30" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">+30</h4>
-                  <p class="liga-info-desc">Nivel competitivo, jugadoras mayores de 30 años.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20%2B30%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-            </div>
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/reserva%20-18.png" alt="Liga de Fútbol 7 Femenino - Categoría Reserva -18" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">Reserva (-18)</h4>
-                  <p class="liga-info-desc">Nivel competitivo, jugadoras menores de 18 años.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleadora, Valla menos vencida y MVP de la Liga · voucher de buffet a la MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20info%20de%20Reserva%20-18%20Femenino" class="btn-blanco btn-sm" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-            </div>
-
-          </div>
+      <div class="proximos-torneos">
+        <div class="proximos-grid">
+          <article class="proximo-card">
+            <img src="assets/clausura-2026-femenino-mas30.jpg" alt="Torneo Clausura 2026 de Fútbol 7 Femenino +30 en Madryn Norte" loading="lazy" decoding="async">
+            <div class="proximo-info"><p class="proximo-kicker">Inscripciones abiertas</p><h3 class="proximo-nombre">Clausura 2026 · Fútbol 7 Femenino +30</h3><div class="proximo-datos"><span class="proximo-dato">Inicio tentativo: 14/09</span><span class="proximo-dato">Lun, Mié y Vie</span><span class="proximo-dato">19:00 a 23:00</span><span class="proximo-dato">En vivo por YouTube</span></div><a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20inscribir%20un%20equipo%20en%20el%20Clausura%202026%20Femenino%20%2B30" class="btn-blanco btn-sm" target="_blank" rel="noopener">Inscribir equipo</a></div>
+          </article>
+          <article class="proximo-card">
+            <img src="assets/clausura-2026-masculino-mas30.jpg" alt="Torneo Clausura 2026 de Fútbol 7 Masculino +30 en Madryn Norte" loading="lazy" decoding="async">
+            <div class="proximo-info"><p class="proximo-kicker">Inscripciones abiertas</p><h3 class="proximo-nombre">Clausura 2026 · Fútbol 7 Masculino +30</h3><div class="proximo-datos"><span class="proximo-dato">Inicio tentativo: 14/09</span><span class="proximo-dato">Lun, Mié y Vie</span><span class="proximo-dato">19:00 a 23:00</span><span class="proximo-dato">En vivo por YouTube</span></div><a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20inscribir%20un%20equipo%20en%20el%20Clausura%202026%20Masculino%20%2B30" class="btn-blanco btn-sm" target="_blank" rel="noopener">Inscribir equipo</a></div>
+          </article>
         </div>
+      </div>
 
-        <!-- Masculino -->
-        <div class="ligas-grupo">
-          <div class="ligas-grupo-header">
-            <span class="ligas-grupo-badge proxima">Próximamente</span>
-            <span class="ligas-grupo-titulo">Liga de Fútbol 7 Masculino</span>
-          </div>
-          <p class="ligas-grupo-desc">Ya se viene la liga masculina, con la misma organización, seguimiento y premios que la femenina. Sumate ahora y jugá desde el arranque.</p>
-          <div class="ligas-grid">
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/Liga%20de%20honor%20Masculina.png" alt="Liga de Fútbol 7 Masculino - Categoría Liga de Honor" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">Liga de Honor</h4>
-                  <p class="liga-info-desc">La categoría más competitiva de la liga masculina. Libre de edad, para los equipos que van por el nivel más alto de Madryn Norte.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleador, Valla menos vencida y MVP de la Liga · voucher de buffet al MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20sumarme%20a%20Liga%20de%20Honor%20Masculino" class="btn-blanco btn-sm" target="_blank" rel="noopener">Avisenme por WhatsApp</a>
-              </div>
-            </div>
-
-            <div class="liga-banner-card">
-              <img class="liga-banner-img" src="banners%20torneos/tinified/masculina%20%2B35.png" alt="Liga de Fútbol 7 Masculino - Categoría +35" decoding="async" loading="lazy">
-              <button type="button" class="liga-banner-toggle">Ver información completa</button>
-              <div class="liga-banner-info">
-                <div class="liga-info-inner">
-                  <h4 class="liga-info-titulo">+35</h4>
-                  <p class="liga-info-desc">Categoría competitiva y libre de edad, para los equipos con más trayectoria. Mismo nivel de organización y premios que el resto de la liga.</p>
-                  <div class="liga-info-divider"></div>
-                  <ul class="liga-info-list">
-                    <li><strong>Sede:</strong> Madryn Norte, Obreros Unidos 1200</li>
-                    <li><strong>Premios:</strong> trofeo + indumentaria de Dribling Club PM al campeón · trofeo al subcampeón y tercero · reconocimiento Fair Play</li>
-                    <li><strong>Individuales:</strong> Goleador, Valla menos vencida y MVP de la Liga · voucher de buffet al MVP de cada fecha</li>
-                    <li>Cupos limitados — la inscripción se confirma con el pago.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="liga-banner-actions">
-                <a href="https://wa.me/5492804684805?text=Hola!%20Quiero%20sumarme%20a%20%2B35%20Masculino" class="btn-blanco btn-sm" target="_blank" rel="noopener">Avisenme por WhatsApp</a>
-              </div>
-            </div>
-
-          </div>
+      <div class="ligas-compactas">
+        <div class="ligas-compactas-head"><h3 class="ligas-compactas-titulo">Ligas de Fútbol 7</h3><span class="ligas-estado">En desarrollo</span></div>
+        <div class="ligas-compactas-grid">
+          <div class="liga-compacta"><strong>Liga Femenina</strong><div class="categoria-chips"><span class="categoria-chip">Liga de Honor</span><span class="categoria-chip">Primera A</span><span class="categoria-chip">Primera B</span><span class="categoria-chip">+30</span><span class="categoria-chip">Reserva (-18)</span></div></div>
+          <div class="liga-compacta"><strong>Liga Masculina</strong><div class="categoria-chips"><span class="categoria-chip">Liga de Honor</span><span class="categoria-chip">+35</span></div></div>
         </div>
-
+        <div class="liga-links"><a class="liga-link" href="https://timbo.futbol/torneos/madrynnorte" target="_blank" rel="noopener">Fixture y posiciones ↗</a><a class="liga-link" href="https://wa.me/5492804684805?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20las%20ligas%20de%20Madryn%20Norte" target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
       </div>
     </div>
   </section>
@@ -720,8 +668,8 @@
       <div class="festejos-inner">
         <div>
           <p class="section-label" style="color:rgba(255,255,255,.5)">Eventos y Celebraciones</p>
-          <h2 class="festejos-titulo">Festejá con nosotros</h2>
-          <p class="festejos-sub">El complejo está disponible para todo tipo de reuniones y festejos. Combinamos canchas, parrilla y buffet en un solo lugar.</p>
+          <h2 class="festejos-titulo">Festejos y cumpleaños en Puerto Madryn</h2>
+          <p class="festejos-sub">Cumpleaños deportivos, asados, juntadas, despedidas y reuniones con canchas, parrilla y buffet en un solo lugar.</p>
           <div class="festejos-tags">
             <span class="festejo-tag">Asados</span>
             <span class="festejo-tag">Cumpleaños</span>
