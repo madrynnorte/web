@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accesos de administración, alumnos y profesores de Madryn Norte.">
+  <title>Ingresar | Madryn Norte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --rojo:#C0201D; --verde:#1A6B2E; --verde-oscuro:#134F22; --blanco:#fff; --negro:#0D0D0D; --gris:#F4F4F4; --linea:#E0E0E0; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; background:radial-gradient(ellipse at 75% 30%,rgba(192,32,29,.2),transparent 45%),radial-gradient(ellipse at 10% 90%,rgba(26,107,46,.18),transparent 45%),var(--negro); color:#fff; font-family:Inter,sans-serif; }
+    .page { width:min(820px,100%); }
+    .top { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px; }
+    .brand { display:flex; align-items:center; gap:11px; color:#fff; text-decoration:none; font-weight:700; }
+    .mark { width:44px; height:44px; display:grid; place-items:center; border-radius:3px; background:var(--rojo); font-family:Oswald,sans-serif; font-size:22px; }
+    .brand small { display:block; margin-top:2px; color:#aaa; font-size:11px; font-weight:400; letter-spacing:.1em; text-transform:uppercase; }
+    .back { color:#ccc; font-size:14px; text-decoration:none; }
+    .panel { overflow:hidden; border-radius:8px; background:#fff; color:#1a1a1a; box-shadow:0 28px 90px #0008; }
+    .intro { padding:34px 34px 28px; border-bottom:1px solid var(--linea); }
+    .eyebrow { margin:0 0 8px; color:var(--rojo); font-family:Oswald,sans-serif; font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { margin:0; font-family:Oswald,sans-serif; font-size:clamp(34px,6vw,52px); line-height:1; text-transform:uppercase; }
+    .intro p:last-child { margin:14px 0 0; color:#666; line-height:1.6; }
+    .choices { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--linea); }
+    .choice { padding:32px; background:#fff; text-decoration:none; color:#1a1a1a; transition:background .2s,transform .15s; }
+    .choice:hover { position:relative; z-index:1; background:#f8faf8; box-shadow:inset 0 -5px 0 var(--verde); }
+    .choice.admin:hover { box-shadow:inset 0 -5px 0 var(--rojo); }
+    .icon { width:52px; height:52px; display:grid; place-items:center; margin-bottom:20px; border-radius:50%; background:#edf6ef; color:var(--verde); font-family:Oswald,sans-serif; font-size:22px; font-weight:700; }
+    .admin .icon { background:#fff0ef; color:var(--rojo); }
+    h2 { margin:0 0 8px; font-family:Oswald,sans-serif; font-size:25px; text-transform:uppercase; }
+    .choice p { min-height:48px; margin:0 0 22px; color:#666; font-size:14px; line-height:1.55; }
+    .action { display:inline-block; color:var(--verde); font-family:Oswald,sans-serif; font-weight:600; letter-spacing:.07em; text-transform:uppercase; }
+    .admin .action { color:var(--rojo); }
+    @media(max-width:640px) { body{padding:16px}.intro{padding:28px 22px 24px}.choices{grid-template-columns:1fr}.choice{padding:26px 22px}.choice p{min-height:0}.back{font-size:0}.back::after{content:'Volver';font-size:14px} }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <a class="brand" href="/"><span class="mark">MN</span><span>Madryn Norte<small>Complejo deportivo</small></span></a>
+      <a class="back" href="/">← Volver al sitio</a>
+    </div>
+    <section class="panel">
+      <div class="intro">
+        <p class="eyebrow">Acceso privado</p>
+        <h1>¿Cómo querés ingresar?</h1>
+        <p>Elegí el acceso que corresponde a tu cuenta.</p>
+      </div>
+      <div class="choices">
+        <a class="choice admin" href="https://madryn-norte-turnos.madryn-norte-cd.workers.dev/">
+          <span class="icon">A</span>
+          <h2>Administración</h2>
+          <p>Para cargar, modificar o cancelar reservas y registrar cobros.</p>
+          <span class="action">Ingresar al turnero →</span>
+        </a>
+        <a class="choice" href="https://madrynnorte.github.io/Club-Madryn-Norte/perfil.html">
+          <span class="icon">MN</span>
+          <h2>Alumno o profe</h2>
+          <p>Acceso personal para alumnos y profesores de Madryn Norte.</p>
+          <span class="action">Ingresar a mi perfil →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
