@@ -144,6 +144,8 @@
     .btn-primary:hover { background:#a01a18; transform:translateY(-1px); }
     .btn-secondary { font-family:'Oswald',sans-serif; font-size:.92rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; background:transparent; color:var(--blanco); padding:.85rem 1.8rem; text-decoration:none; border:2px solid var(--verde); border-radius:3px; transition:background .2s; display:inline-block; }
     .btn-secondary:hover { background:rgba(26,107,46,.2); }
+    .btn-availability { font-family:'Oswald',sans-serif; font-size:.92rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; background:var(--verde); color:var(--blanco); padding:.85rem 1.8rem; text-decoration:none; border:2px solid var(--verde); border-radius:3px; transition:background .2s,transform .15s; display:inline-block; }
+    .btn-availability:hover { background:var(--verde-oscuro); transform:translateY(-1px); }
     .hero-stats { position:absolute; bottom:3rem; left:max(2rem,calc((100vw - 1100px)/2)); display:flex; gap:3rem; }
     .hero-stat-num { font-family:'Oswald',sans-serif; font-size:2.2rem; font-weight:700; color:var(--blanco); line-height:1; }
     .hero-stat-num span { color:var(--verde); }
@@ -490,6 +492,7 @@
       <p class="hero-tagline">Deporte, comunidad y competencia en un solo lugar. Canchas, torneos, academia y festejos en Puerto Madryn.</p>
       <div class="hero-actions">
         <a href="https://wa.me/5492804684805" class="btn-primary" target="_blank" rel="noopener">Reservar cancha</a>
+        <a href="/disponibilidad.html" class="btn-availability">Ver horarios disponibles</a>
         <a href="contacto.html" class="btn-secondary">Quiero que me contacten</a>
         <a href="https://madrynnorte.github.io/Club-Madryn-Norte/perfil.html" target="_blank" rel="noopener" style="font-family:'Oswald',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#aaa;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 0;border-bottom:1px solid #555;transition:color .2s,border-color .2s" onmouseover="this.style.color='#fff';this.style.borderColor='#fff'" onmouseout="this.style.color='#aaa';this.style.borderColor='#555'">🔐 Soy alumno o profe → Ingresar</a>
       </div>
@@ -714,7 +717,7 @@
     </div>
     <div class="reservas-grid" style="max-width:1100px;margin:3rem auto 0;">
       <div class="reserva-card"><span class="reserva-card-icon">📅</span><div class="reserva-card-titulo">Apertura</div><p class="reserva-card-info">El complejo está abierto todos los días de la semana.</p><div class="reserva-card-horario">15:00 — 24:00 hs · Todos los días</div></div>
-      <div class="reserva-card"><span class="reserva-card-icon">⚽</span><div class="reserva-card-titulo">Horarios disponibles</div><p class="reserva-card-info">Mirá los turnos libres de los próximos días y elegí el que te convenga.</p><div class="reserva-card-horario"><a href="/disponibilidad.html" style="color:var(--verde);text-decoration:none;font-weight:700;">Ver agenda disponible →</a></div></div>
+      <div class="reserva-card"><span class="reserva-card-icon">⚽</span><div class="reserva-card-titulo">Dos canchas disponibles</div><p class="reserva-card-info">Cancha 7 sintético: $40.000 por hora.<br>Multideporte (fútbol 5): $25.000 por hora.</p><div class="reserva-card-horario"><a href="/disponibilidad.html" style="color:var(--verde);text-decoration:none;font-weight:700;">Ver horarios disponibles →</a></div></div>
       <div class="reserva-card"><span class="reserva-card-icon">📲</span><div class="reserva-card-titulo">Reservas</div><p class="reserva-card-info">La forma más rápida es por WhatsApp. También podés escribirnos por Instagram.</p><div class="reserva-card-horario">+54 9 280 468-4805</div></div>
       <div class="reserva-card"><span class="reserva-card-icon">🏆</span><div class="reserva-card-titulo">Torneos</div><p class="reserva-card-info">Fixture, posiciones y resultados de todos nuestros torneos en Timbo.</p><div class="reserva-card-horario"><a href="https://timbo.futbol/torneos/madrynnorte" style="color:var(--verde);text-decoration:none;" target="_blank">timbo.futbol/torneos/madrynnorte ↗</a></div></div>
       <div class="reserva-card"><span class="reserva-card-icon">📍</span><div class="reserva-card-titulo">Dirección</div><p class="reserva-card-info">Fácil acceso desde cualquier punto de Puerto Madryn.</p><div class="reserva-card-horario">Obreros Unidos 1200 · Puerto Madryn</div></div>
